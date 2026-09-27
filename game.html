@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Гра із зіркою</title>
+
+    <style>
+        body {
+            text-align: center;
+            background: #202050;
+            color: white;
+            font-family: Arial;
+            padding-top: 50px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #star {
+            font-size: 80px;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>⭐ Натисни на зірку!</h1>
+
+    <p>Твій рахунок: <span id="score">0</span></p>
+
+    <button id="star">⭐</button>
+
+    <br><br>
+
+    <button id="reset">Почати заново</button>
+
+    <script>
+        let score = 0;
+
+        const star = document.getElementById("star");
+        const scoreText = document.getElementById("score");
+        const reset = document.getElementById("reset");
+
+        star.addEventListener("click", function () {
+            score++;
+            scoreText.textContent = score;
+        });
+
+        reset.addEventListener("click", function () {
+            score = 0;
+            scoreText.textContent = score;
+        });
+    </script>
+
+</body>
+
+</html>
